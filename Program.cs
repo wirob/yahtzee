@@ -1,12 +1,12 @@
-﻿using System;
-
-namespace yahtzee
+﻿namespace yahtzee
 {
   class Program
   {
-    static void Main(string[] args)
+    static void Main()
     {
-      Console.WriteLine("Hello World!");
+      controller.Game Game = new controller.Game();
+
+      Game.StartGame();
     }
   }
 }
