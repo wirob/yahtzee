@@ -1,3 +1,5 @@
+using System;
+
 namespace controller
 {
   class Game
@@ -8,7 +10,23 @@ namespace controller
     {
       View.DisplayGreeting();
 
-      CurrentScore();
+      View.SetPlayerName();
+      var name = Console.ReadLine();
+
+      if (CheckPlayerNameLength(name))
+      {
+        View.GreetPlayer(name);
+      }
+      else
+      {
+        View.Error("Name not long enough needs to be at least 3 char long");
+      }
+
+    }
+
+    private bool CheckPlayerNameLength(string name)
+    {
+      return name.Length >= 3;
     }
 
     private void CurrentScore()
