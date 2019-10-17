@@ -18,6 +18,22 @@ namespace view
     {
       Console.WriteLine("The Computer has a total of: {0}", score);
     }
+
+    public void SetPlayerName()
+    {
+      Console.WriteLine("Which name do you want to use?");
+    }
+
+    public void GreetPlayer(string name)
+    {
+      Console.WriteLine("Welcome to the game {0}.", name);
+    }
+
+    public void Error(string error)
+    {
+      Console.WriteLine(error);
+    }
+
   }
 }
 
